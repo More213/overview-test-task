@@ -1,0 +1,30 @@
+.overview-body{
+  width: 100%;
+}
+
+.header-overview {
+  margin-top: 55px;
+  margin-left: 65px;
+  margin-right: 63px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  width: 68px;
+  padding: 9px 18px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+button.settings-button {
+  font-size: 25px;
+  background: #EEF2F5;
+  color: #9DADB9;
+}
+button.add-button {
+  background: #10CD45;
+  color: #FFFFFF;
+}

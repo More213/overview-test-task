@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "overview-test-task"
+  "defaultProject": "overview-test-task",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
