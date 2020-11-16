@@ -11,6 +11,10 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.header-overview h1 {
+  font-family: Lato-Light;
+  font-weight: 600;
+}
 .button-container {
   display: flex;
   flex-direction: row;
@@ -52,4 +56,8 @@ button.add-button {
   margin-top: 40px;
   margin-left: 65px;
   margin-right: 65px;
+}
+a{
+  color: #FFFFFF;
+  text-decoration: none;
 }

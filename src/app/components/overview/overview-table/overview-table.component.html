@@ -1,0 +1,29 @@
+<table>
+
+      <tr>
+        <th>Owner</th>
+        <th>End date</th>
+        <th>Profits</th>
+        <th>Losses</th>
+        <th>Phone</th>
+      </tr>
+
+      <tr *ngFor="let owner of owners">
+        <td>
+          {{owner.firstName}}  {{owner.secondName}}
+        </td>
+        <td>
+          {{owner.endDate}}
+        </td>
+        <td>
+          {{owner.profits}}
+        </td>
+        <td>
+          {{owner.losses}}
+        </td>
+        <td>
+          {{owner.phone}}
+        </td>
+      </tr>
+
+</table>

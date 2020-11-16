@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { environment } from '../environments/environment';
-import { metaReducers, reducers } from './reducers';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AppEffects} from './app.effects';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,11 +20,12 @@ import { SecurityComponent } from './components/security/security.component';
 import { OwnershipComponent } from './components/ownership/ownership.component';
 import { ABTestComponent } from './components/abtest/abtest.component';
 import { ColorsComponent } from './components/colors/colors.component';
-import { OverviewTableComponent } from './components/overview-table/overview-table.component';
-import { OverviewFormComponent } from './components/overview-form/overview-form.component';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { OverviewTableComponent } from './components/overview/overview-table/overview-table.component';
+import { OverviewFormComponent } from './components/overview/overview-form/overview-form.component';
+import { PaginationComponent } from './components/overview/pagination/pagination.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalFormComponent } from './components/overview/modal-form/modal-form.component';
+
 
 @NgModule({
   declarations: [
@@ -36,21 +40,20 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     ABTestComponent,
     ColorsComponent,
     OverviewTableComponent,
-    OverviewFormComponent
+    OverviewFormComponent,
+    PaginationComponent,
+    ModalFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true,
-      }
-    }),
+    StoreModule.forRoot( {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot()
+    EffectsModule.forRoot([AppEffects]),
+    StoreRouterConnectingModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
