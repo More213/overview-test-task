@@ -11,19 +11,19 @@
         />
     </div>
     <div class="form-group col">
-      <label for="owner-secondName">Second Name</label>
+      <label for="owner-lastName">Last Name</label>
       <input
         type="text"
         class="form-control"
-        id="owner-secondName"
-        formControlName="secondName"
-        placeholder="Second Name"
+        id="owner-lastName"
+        formControlName="lastName"
+        placeholder="Last Name"
         />
     </div>
     <div class="form-group col">
       <label for="owner-endDate">End date</label>
       <input
-        type="text"
+        type="date"
         class="form-control"
         id="owner-endDate"
         formControlName="endDate"
@@ -55,13 +55,13 @@
     <div class="form-group col">
       <label for="owner-phone">Phone</label>
       <input
-        type="text"
+        type="tel"
         class="form-control"
         id="owner-phone"
         formControlName="phone"
-        placeholder="Phone"
+        placeholder="8(000)000-00-00"
         />
     </div>
   </div>
-  <button type="button" class="btn btn-success " [disabled]="profileForm.invalid" (click)="onAdd()">Add new owner</button>
+  <a href="#"><button type="button" class="btn btn-success " [disabled]="profileForm.invalid" (click)="onAdd()">Add new owner</button></a>
 </form>

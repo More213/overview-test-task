@@ -1,7 +1,7 @@
 export class Owner {
   constructor(
     public firstName: string,
-    public secondName: string,
+    public lastName: string,
     public endDate: string,
     public profits: string,
     public losses: string,

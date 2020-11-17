@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Owner} from '../../../interfaces/owner';
 import {ownersArray} from '../overview-table/overview-table.component';
 
@@ -9,7 +9,6 @@ import {ownersArray} from '../overview-table/overview-table.component';
 })
 export class ModalFormComponent implements OnInit {
   public owners: Owner[] = ownersArray;
-
   ngOnInit(): void {
   }
 

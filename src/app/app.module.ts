@@ -25,6 +25,7 @@ import { OverviewFormComponent } from './components/overview/overview-form/overv
 import { PaginationComponent } from './components/overview/pagination/pagination.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalFormComponent } from './components/overview/modal-form/modal-form.component';
+// import {PhoneMaskDirective} from './utills/MaskUtill';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ModalFormComponent } from './components/overview/modal-form/modal-form.
     OverviewTableComponent,
     OverviewFormComponent,
     PaginationComponent,
-    ModalFormComponent
+    ModalFormComponent,
+    // PhoneMaskDirective
   ],
   imports: [
     BrowserModule,
